@@ -1,28 +1,25 @@
-//SPDX-License-Identifier: Unlicense
+//License du MIT tous ca tous ca
+
 pragma solidity ^0.8.0;
 
-import "hardhat/console.sol";
-
 contract Calculator {
-    uint256 private _result;
-
-    function getResult() public view returns (uint256) {
-        return _result;
+    function add(uint256 nb1, uint256 nb2) public pure returns (uint256) {
+        return (nb1 + nb2);
     }
 
-    function add(int256 nb1, int256 nb2) public pure returns (int256) {
-        return nb1 + nb2;
+    function sub(uint256 nb1, uint256 nb2) public pure returns (uint256) {
+        return (nb1 - nb2);
     }
 
-    function sub(int256 nb1, int256 nb2) public pure returns (int256) {
-        return nb1 - nb2;
+    function mul(uint256 nb1, uint256 nb2) public pure returns (uint256) {
+        return (nb1 * nb2);
     }
 
-    function mul(int256 nb1, int256 nb2) public pure returns (int256) {
-        return nb1 * nb2;
+    function div(uint256 nb1, uint256 nb2) public pure returns (uint256) {
+        return (nb1 / nb2);
     }
 
-    function div(int256 nb1, int256 nb2) public pure returns (int256) {
-        return nb1 / nb2;
+    function mod(uint256 nb1, uint256 nb2) public pure returns (uint256) {
+        return (nb1 % nb2);
     }
 }
