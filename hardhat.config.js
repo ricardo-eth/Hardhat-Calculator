@@ -1,3 +1,18 @@
+const { task } = require("hardhat/config");
+
+require("@nomiclabs/hardhat-waffle");
+
+task("accounts", "Prints the list of accounts", async () => {
+  const accounts = await ethers.getSigners();
+
+  for (const account of accounts) {
+    console.log(account.address);
+  }
+});
+
+// You need to export an object to set up your config
+// Go to https://hardhat.org/config/ to learn more
+
 /**
  * @type import('hardhat/config').HardhatUserConfig
  */
